@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tienda.databinding.NotaItemBinding
 
-class NotasAdapter(val notas: List<Nota>, private val NotaClickedListener : (Nota) -> Unit) : RecyclerView.Adapter<NotasAdapter.ViewHolder>() {
+class NotasAdapter(private val NotaClickedListener : (Nota) -> Unit) : RecyclerView.Adapter<NotasAdapter.ViewHolder>() {
+    var notas = emptyList<Nota>()
+
     companion object{
         const val ACTION_VIEW = "ubicación seleccionada"
     }

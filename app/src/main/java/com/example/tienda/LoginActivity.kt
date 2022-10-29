@@ -49,7 +49,8 @@ class LoginActivity : AppCompatActivity() {
                     }
 
             }else{
-                Toast.makeText(this, "Escriba email y contraseña", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
             }
         }
     }
